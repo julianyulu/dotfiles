@@ -1,0 +1,15 @@
+Description='utexas'
+Connection=wireless
+Interface=wlp4s0
+Security=wpa-configsection
+IP=dhcp
+WPAConfigSection=(
+    'ssid="utexas"'
+    'key_mgmt=WPA-EAP'
+    'eap=LEAP'
+    'identity="UTEID"'
+    'password="passwd"'
+    'priority=1'
+    'ca_cert="/path/to/GeoTrust_Global_CA_cer"'
+
+)
