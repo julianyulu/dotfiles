@@ -5,6 +5,7 @@
 (package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/custom/")
+
 (require 'yulu-editing)
 (require 'yulu-convenience)
 (require 'yulu-environment)
@@ -12,6 +13,8 @@
 (require 'yulu-python3)
 (require 'yulu-latex)
 (require 'yulu-org)
+(require 'yulu-header)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -19,7 +22,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (markdown-mode volatile-highlights undo-tree jedi ibuffer-vc highlight-symbol golden-ratio flycheck elpy auctex))))
+    (header2 markdown-mode volatile-highlights undo-tree jedi ibuffer-vc highlight-symbol golden-ratio flycheck elpy auctex))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
