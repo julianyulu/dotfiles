@@ -55,6 +55,7 @@ alias lab_Karl='rdesktop -u artemis -p slowbeam 146.6.180.212'
 alias lab_Karl_full='rdesktop -u artemis -p slowbeam -g 1366x768 146.6.180.212'
 alias lab_jianyong='rdesktop -u Brownian -p amyjohn 128.83.155.3'
 alias lab_jianyong_full='rdesktop -u Brownian -p amyjohn -g 1920x1080 128.83.155.3'
+alias lab_starscream_full='rdesktop -u StarScream -p slowbeam -g 1920x1080 146.6.180.215'
 #*******\control sound of laptop speaker using amixer/****************
 
 #follow 'on' to turn on, 'off' to turn off;
