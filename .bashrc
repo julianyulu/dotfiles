@@ -47,26 +47,15 @@ export PS1="\[\033[0;37m\]\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[\
 
 
 #***********\remote to lab computer by using rdesktop/*****************
-<<<<<<< HEAD
-alias lab_slower='rdesktop -u slower -p slowbeam 146.6.180.210'
-alias lab_slower_full='rdesktop -u slower -p slowbeam -g 1920x1080 146.6.180.210'
-alias lab_beam='rdesktop -u beam -p slowbeam 146.6.180.208 -g 800x600'
-alias lab_beam_full='rdesktop -u beam -p slowbeam 146.6.180.208 -g 1920x1080'
-alias lab_Karl='rdesktop -u artemis -p slowbeam 146.6.180.212'
-alias lab_Karl_full='rdesktop -u artemis -p slowbeam -g 1366x768 146.6.180.212'
-alias lab_jianyong='rdesktop -u Brownian -p amyjohn 128.83.155.3'
-alias lab_jianyong_full='rdesktop -u Brownian -p amyjohn -g 1920x1080 128.83.155.3'
-alias lab_starscream_full='rdesktop -u StarScream -p slowbeam -g 1920x1080 146.6.180.215'
-=======
-alias lab_slower='rdesktop -u xxxx -p xxxxx 146.6.180.210'
-alias lab_slower_full='rdesktop -u xxxx -p xxxxx -g 1920x1080 146.6.180.210'
-alias lab_beam='rdesktop -u beam -p xxxxx 146.6.180.208 -g 800x600'
-alias lab_beam_full='rdesktop -u beam -p xxxxx 146.6.180.208 -g 1920x1080'
-alias lab_Karl='rdesktop -u artemis -p xxxxx 146.6.180.212'
-alias lab_Karl_full='rdesktop -u artemis -p xxxxx -g 1366x768 146.6.180.212'
-alias lab_jianyong='rdesktop -u xxxx -p xxxx 128.83.155.3'
-alias lab_jianyong_full='rdesktop -u xxxx -p xxxx -g 1920x1080 128.83.155.3'
->>>>>>> 2c2da61abbd099ad9fac7312cd2a94baacf04c53
+alias lab_slower='rdesktop -u slower -p xxxxxxxx 146.6.xxx.xxx'
+alias lab_slower_full='rdesktop -u slower -p xxxxxx -g 1920x1080 xxxxxxxxxxx'
+alias lab_beam='rdesktop -u beam -p xxxxxxxx 146.6.xxx.xxx -g 800x600'
+alias lab_beam_full='rdesktop -u beam -p xxxxxxxx 146.6.xxx.xxx -g 1920x1080'
+alias lab_Karl='rdesktop -u artemis -p xxxxxxxx 146.6.xxx.xxx'
+alias lab_Karl_full='rdesktop -u artemis -p xxxxxxxx 146.6.xxx.xxx -g 1366x768'
+alias lab_jianyong='rdesktop -u Brownian -p xxxxxxxx 146.6.xxx.xxx'
+alias lab_jianyong_full='rdesktop -u Brownian -p xxxxxxxx 146.6.xxx.xxx'
+alias lab_starscream_full='rdesktop -u StarScream -p xxxxxxxx 146.6.xxx.xxx'
 #*******\control sound of laptop speaker using amixer/****************
 
 #follow 'on' to turn on, 'off' to turn off;
@@ -78,3 +67,5 @@ alias mysound="amixer set 'Master'"
 #follow [0.0-1.0] to control brightness 
 alias myscreen='xrandr --output eDP1 --brightness'
 
+#***********\Alias for emacs command line/************
+alias emacs='emacs -nw'
