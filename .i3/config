@@ -43,7 +43,8 @@ set $right semicolon
 floating_modifier Mod4
 
 # start a terminal
-bindsym Mod4+Return exec urxvt
+# To start from current path, have install xcwd first
+bindsym Mod4+Return exec urxvt -cd `xcwd`
 
 # kill focused window
 bindsym Mod4+Shift+q kill
