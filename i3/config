@@ -1,11 +1,3 @@
-
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-
-
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -26,8 +18,8 @@
 #
 
 # Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-font pango:monospace 11
+# is used in the bar {} block below.f
+font pango:monospace 14
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -51,13 +43,20 @@ set $right semicolon
 floating_modifier Mod4
 
 # start a terminal
-bindsym Mod4+Return exec konsole
+# To start from current path, have install xcwd first
+bindsym Mod4+Return exec urxvt -cd `xcwd`
 
 # kill focused window
 bindsym Mod4+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym Mod4+d exec dmenu_run
+#bindsym Mod4+d exec dmenu_run -b  -nb "#2d7fa4" -nf green -sf "#a353e0" -sb "#95a9b3" -fn "pango:monospace 10" -p "Arch Linux"
+
+# Used rofi instead of dmean
+#bindsym Mod4+d exec rofi -show run -config /home/yulu/.config/rofi/material.rasi
+bindsym Mod4+d exec "bash ~/.config/rofi/SEARCH"
+bindsym Mod4+p exec "bash ~/.config/rofi/SYSTEM"
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -178,13 +177,14 @@ mode "resize" {
 bindsym Mod4+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command py3status -n 10 -c ~/.i3/i3status.conf
-	tray_output primary
-		       
-				
-}
+# One can either choose to used i3 bar or polybar
+# bar {
+#         #status_command py3status -n 10 -c ~/.i3/i3status.conf
+# 	#status_command i3blocks -c ~/.i3/i3status_blocks.conf
+# 	position top
+# 	#tray_output primary
+# 	status_command i3status -c ~/.i3/i3status.conf
+# 	}
 
 
 
@@ -204,6 +204,7 @@ bar {
 # Yu's config goes from here	                                      
 focus_follows_mouse no
 popup_during_fullscreen smart
+workspace_auto_back_and_forth yes # automatically go back to where you come from
 
 # Multimedia Keybindings for sound volume control 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
@@ -213,3 +214,25 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # Multimedia Keybindings for screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+bindsym Mod4+t exec xrandr --output DP1 --auto --right-of eDP1
+bindsym Mod4+Shift+t exec xrandr --output DP1 --off
+
+
+## Startup applications
+#################################
+
+#set tap actions with 1/2/3 fingers
+exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Tap Action" 0 0 0 0 1 3 2
+
+#enable two-finger scrolling in all directions
+exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1 1
+
+exec urxvt #start urxvt when i3 starts/restarts
+exec --no-startup-id dunst # notification tool, not sure if it's working 
+#exec --no-startup-id feh --bg-scale /path/to/awesome/wallpaper.png
+
+# use compton to enable rofi menu transparancy
+exec --no-startup-id compton -b
+
+# run polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
