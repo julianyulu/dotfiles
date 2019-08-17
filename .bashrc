@@ -29,7 +29,7 @@ test -s ~/.alias && . ~/.alias || true
 
 
 #-------------------personal config starts from here------------------------
-archey3
+archey3 
 export VISUAL=emacs
 export EDITOR=emacs
 
@@ -47,15 +47,21 @@ export PS1="\[\033[0;37m\]\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[\
 
 
 #***********\remote to lab computer by using rdesktop/*****************
-alias lab_slower='rdesktop -u slower -p xxxxxxxx 146.6.xxx.xxx'
-alias lab_slower_full='rdesktop -u slower -p xxxxxx -g 1920x1080 xxxxxxxxxxx'
-alias lab_beam='rdesktop -u beam -p xxxxxxxx 146.6.xxx.xxx -g 800x600'
-alias lab_beam_full='rdesktop -u beam -p xxxxxxxx 146.6.xxx.xxx -g 1920x1080'
-alias lab_Karl='rdesktop -u artemis -p xxxxxxxx 146.6.xxx.xxx'
-alias lab_Karl_full='rdesktop -u artemis -p xxxxxxxx 146.6.xxx.xxx -g 1366x768'
-alias lab_jianyong='rdesktop -u Brownian -p xxxxxxxx 146.6.xxx.xxx'
-alias lab_jianyong_full='rdesktop -u Brownian -p xxxxxxxx 146.6.xxx.xxx'
-alias lab_starscream_full='rdesktop -u StarScream -p xxxxxxxx 146.6.xxx.xxx'
+alias lab_quant_full='rdesktop -u user -p xxxxxxx -g 1920x1080 146.6.180.210'
+alias lab_slower='rdesktop -u slower -p xxxxx 146.6.180.210'
+alias lab_slower_full='rdesktop -u slower -p xxxxx -g 1920x1080 146.6.180.210'
+alias lab_beam='rdesktop -u beam -p xxxxx 146.6.180.208 -g 1920x1050'
+alias lab_beam_full='rdesktop -u beam -p xxxxxx 146.6.180.208 -g 1920x1080'
+alias lab_Karl='rdesktop -u artemis -p xxxxxx 146.6.180.212'
+alias lab_Karl_full='rdesktop -u artemis -p xxxxxx -g 1366x768 146.6.180.212'
+alias lab_jianyong='rdesktop -u Brownian -p xxxxx 128.83.155.3'
+alias lab_jianyong_full='rdesktop -u Brownian -p xxxxx -g 1920x1080 128.83.155.3'
+alias lab_starscream_full='rdesktop -u StarScream -p xxxxxx -g 1920x1080 146.6.180.215'
+alias lab_server='rdesktop -u yulu -p xxxxx -g 1920x1050 internal.raizenlab.ph.utexas.edu'
+alias lab_server_full='rdesktop -u yulu -p xxxxx -g 1920x1080 internal.raizenlab.ph.utexas.edu'
+alias lab_office='rdesktop -u superlu -p xxxxxxx -g 1920x1050 146.6.180.183'
+alias lab_office_full='rdesktop -u superlu -p xxxxx -g 1920x1080 146.6.180.183'
+
 #*******\control sound of laptop speaker using amixer/****************
 
 #follow 'on' to turn on, 'off' to turn off;
@@ -69,3 +75,14 @@ alias myscreen='xrandr --output eDP1 --brightness'
 
 #***********\Alias for emacs command line/************
 alias emacs='emacs -nw'
+alias cdw='cd && cd Work'
+alias cdg='cd && cd Github'
+# Following give error after arch update when import matplotlib.pyplot as plt 
+#export PYTHONPATH='/home/yulu/.local/lib/python3.6/site-packages':'/home/yulu/Github'
+
+alias connect_office='xrandr --output HDMI2 --auto --right-of eDP1'
+alias disconnect_office='xrandr --output HDMI2 --off'
+
+
+#************* Tesseract-ocr env path*********************
+#export TESSDATA_PREFIX="/usr/share/tessdata/"

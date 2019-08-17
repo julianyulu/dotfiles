@@ -44,7 +44,7 @@ floating_modifier Mod4
 
 # start a terminal
 # To start from current path, have install xcwd first
-bindsym Mod4+Return exec urxvt -cd `xcwd`
+bindsym Mod4+Return exec urxvt -sl 5000 -cd `xcwd`
 
 # kill focused window
 bindsym Mod4+Shift+q kill
@@ -229,7 +229,8 @@ exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrollin
 
 exec urxvt #start urxvt when i3 starts/restarts
 exec --no-startup-id dunst # notification tool, not sure if it's working 
-#exec --no-startup-id feh --bg-scale /path/to/awesome/wallpaper.png
+
+#exec --no-startup-id feh --bg-scale /home/yulu/Pictures/test.png
 
 # use compton to enable rofi menu transparancy
 exec --no-startup-id compton -b
