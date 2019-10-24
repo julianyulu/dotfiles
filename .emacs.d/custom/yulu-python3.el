@@ -17,4 +17,4 @@
 
 ;; (highlight-indentation-mode nil)
 
-;;(elpy-enable)
+(elpy-enable)

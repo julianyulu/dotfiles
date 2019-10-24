@@ -17,8 +17,11 @@
     golden-ratio         ;; used golden ratio when split windows (auto run)
     highlight-symbol     ;; hight symble and cycling through defs (C-c l activate, M-p/M-n nevigate)
     auto-complete        ;; auto complete text that has appeared prev, and func auto complete for elisp but not python [disabled]
-    ;; -------------------------- global configurations -------------------------------------
-    elpy                 ;; python environment 
+    ;; -------------------------- python env configurations -------------------------------------
+    elpy                 ;; python environment
+
+    ;; -------------------------- org configurations -------------------------------------
+    org
     ))
 
 (mapc #'(lambda (package)
@@ -42,7 +45,7 @@
 (require 'yulu-environment)
 (require 'yulu-faces-and-ui)
 (require 'yulu-python3)
-(require 'yulu-latex)
+;;(require 'yulu-latex)
 ;; (require 'yulu-org)
 ;; (require 'yulu-header)
 
@@ -55,7 +58,7 @@
  ;; If there is more than one, they won't work right.
  '(company-auto-complete nil)
  '(company-idle-delay 0.5)
- '(package-selected-packages (quote (material-theme better-defaults))))
+ '(package-selected-packages (quote (elpy material-theme better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
